@@ -1,0 +1,14 @@
+<html>
+	<head></head>
+	<body>
+		<iframe src="http://sahilsihag.github.io/sop_redirect/benign1.html" id="myFrame1"></iframe>
+		<iframe src="https://sahilsihag.github.io/sop_redirect/benign2.html" id="myFrame2"></iframe>
+		<h1 id="myHeader1">My Header</h1>
+		<h1 id="myHeader2">My Header</h1>
+		<script>
+		document.getElementById("myHeader1").innerHTML = document.getElementById('myFrame1').contentWindow.document.body.innerHTML;
+		document.getElementById("myHeader2").innerHTML = document.getElementById('myFrame2').contentWindow.document.body.innerHTML;
+		</script>
+	</body>
+
+</html>
