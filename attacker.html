@@ -1,22 +1,20 @@
 <html>
 	<head></head>
 	<body>
-		<iframe src="http://sahilsihag.github.io/sop_redirect/benign1.html" id="myFrame1" onload="doIt('myHeader1', 'myFrame1')" onerror="doError('myHeader1')"></iframe>
-		<iframe src="https://sahilsihag.github.io/sop_redirect/benign2.html" id="myFrame2" onload="doIt('myHeader2', 'myFrame2')" onerror="doError('myHeader2')"></iframe>
-		<iframe src="https://cms.cispa.saarland/system/courses" id="myFrame3" onload="doIt('myHeader3', 'myFrame3')" onerror="doError('myHeader3')"></iframe>
-		<iframe src="https://de.wikipedia.org/wiki/Wikipedia:Hauptseite" id="myFrame4" onload="doIt('myHeader4', 'myFrame4')" onerror="doError('myHeader4')"></iframe>
+		<iframe src="http://sahilsihag.github.io/sop_redirect/benign1.html" id="myFrame1" onload="doIt('myHeader1', 'myFrame1')"></iframe>
+		<iframe src="https://sahilsihag.github.io/sop_redirect/benign2.html" id="myFrame2" onload="doIt('myHeader2', 'myFrame2')"></iframe>
+		<iframe src="https://cms.cispa.saarland/system/courses" id="myFrame3" onload="doIt('myHeader3', 'myFrame3')"></iframe>
+		<iframe src="https://de.wikipedia.org/wiki/Wikipedia:Hauptseite" id="myFrame4" onload="doIt('myHeader4', 'myFrame4')"></iframe>
 
-		<h1 id="myHeader1">My Header</h1>
-		<h1 id="myHeader2">My Header</h1>
-		<h1 id="myHeader3">My Header</h1>
-		<h1 id="myHeader4">My Header</h1>
+		<h1 id="myHeader1">Couldn't load content from iframe1: </h1>
+		<h1 id="myHeader2">Couldn't load content from iframe2: </h1>
+		<h1 id="myHeader3">Couldn't load content from iframe3: cms.cispa.saarland disallows framing</h1>
+		<h1 id="myHeader4">Couldn't load content from iframe4: different origin (that allowed framing)</h1>
+		
 		<script>
 		function doIt(destination, src){
 			document.getElementById(destination).innerHTML = document.getElementById(src).contentWindow.document.body.innerHTML;
-			}
-		function doError(destination){
-			document.getElementById(destination).innerHTML = "error"
-			}
+		}
 		</script>
 	</body>
 
