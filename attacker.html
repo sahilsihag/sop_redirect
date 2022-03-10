@@ -12,10 +12,10 @@
 		<h1 id="myHeader4">My Header</h1>
 		<script>
 		function doIt(destination, src){
-			document.getElementById(string_val).innerHTML = document.getElementById(string_val).contentWindow.document.body.innerHTML;
+			document.getElementById(destination).innerHTML = document.getElementById(src).contentWindow.document.body.innerHTML;
 			}
 		function doError(destination){
-			document.getElementById(string_new).innerHTML = "error"
+			document.getElementById(destination).innerHTML = "error"
 			}
 		</script>
 	</body>
