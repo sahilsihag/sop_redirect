@@ -1,22 +1,21 @@
 <html>
 	<head></head>
 	<body>
-		<iframe src="http://sahilsihag.github.io/sop_redirect/benign1.html" id="myFrame1" onload="doIt1()" onerror="error1()"></iframe>
-		<iframe src="https://sahilsihag.github.io/sop_redirect/benign2.html" id="myFrame2" onload="doIt2()" onerror="error2()"></iframe>
+		<iframe src="http://sahilsihag.github.io/sop_redirect/benign1.html" id="myFrame1" onload="doIt('myHeader1', 'myFrame1')" onerror="doError('myHeader1')"></iframe>
+		<iframe src="https://sahilsihag.github.io/sop_redirect/benign2.html" id="myFrame2" onload="doIt('myHeader2', 'myFrame2')" onerror="doError('myHeader2')"></iframe>
+		<iframe src="https://cms.cispa.saarland/system/courses" id="myFrame3" onload="doIt('myHeader3', 'myFrame3')" onerror="doError('myHeader3')"></iframe>
+		<iframe src="https://de.wikipedia.org/wiki/Wikipedia:Hauptseite" id="myFrame4" onload="doIt('myHeader4', 'myFrame4')" onerror="doError('myHeader4')"></iframe>
+
 		<h1 id="myHeader1">My Header</h1>
 		<h1 id="myHeader2">My Header</h1>
+		<h1 id="myHeader3">My Header</h1>
+		<h1 id="myHeader4">My Header</h1>
 		<script>
-		function doIt1(){
-			document.getElementById("myHeader1").innerHTML = document.getElementById('myFrame1').contentWindow.document.body.innerHTML;
+		function doIt(destination, src){
+			document.getElementById(string_val).innerHTML = document.getElementById(string_val).contentWindow.document.body.innerHTML;
 			}
-		function doIt2(){	
-		document.getElementById("myHeader2").innerHTML = document.getElementById('myFrame2').contentWindow.document.body.innerHTML;
-			}
-		function error1(){
-			document.getElementById("myHeader1").innerHTML = "error"
-			}
-		function error2(){	
-		document.getElementById("myHeader2").innerHTML = "error"
+		function doError(destination){
+			document.getElementById(string_new).innerHTML = "error"
 			}
 		</script>
 	</body>
